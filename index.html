@@ -30,11 +30,10 @@
         <input id="searchInput" type="search" autocomplete="off" placeholder="Buscar producto · Produkt suchen…" autofocus>
         <button type="button" id="clearSearch" aria-label="Borrar búsqueda">×</button>
       </form>
-      <div class="quick-filters" aria-label="Filtros">
-        <button class="filter active" data-filter="all">Todos · Alle</button>
-        <button class="filter" data-filter="both">ES + DE</button>
-        <button class="filter" data-filter="es">Español · Spanisch</button>
-        <button class="filter" data-filter="de">Deutsch</button>
+      <div class="quick-filters" aria-label="Idioma de las fichas · Sprache der Produktinformationen">
+        <button class="filter active" data-language="both" aria-pressed="true">ES + DE</button>
+        <button class="filter" data-language="es" aria-pressed="false">Español · Spanisch</button>
+        <button class="filter" data-language="de" aria-pressed="false">Deutsch · Alemán</button>
       </div>
     </section>
 
@@ -55,6 +54,6 @@
     <p>Catálogo bilingüe para Suiza · Zweisprachiger Katalog für die Schweiz.</p>
     <p>Fichas en español y alemán · Produktinformationen auf Spanisch und Deutsch.</p>
   </footer>
-  <script src="app.js"></script>
+  <script src="app.js?v=20260722-language-filters"></script>
 </body>
 </html>

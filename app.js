@@ -1,4 +1,4 @@
-const state = { products: [], query: "", filter: "all" };
+const state = { products: [], query: "", language: "both" };
 const input = document.querySelector("#searchInput");
 const results = document.querySelector("#results");
 const count = document.querySelector("#resultCount");
@@ -11,10 +11,9 @@ function normalize(value) {
 }
 
 function matchesFilter(product) {
-  if (state.filter === "both") return product.spanish && product.german;
-  if (state.filter === "es") return Boolean(product.spanish);
-  if (state.filter === "de") return Boolean(product.german);
-  return true;
+  if (state.language === "es") return Boolean(product.spanish);
+  if (state.language === "de") return Boolean(product.german);
+  return Boolean(product.spanish || product.german);
 }
 
 function getVisible() {
@@ -34,9 +33,12 @@ function card(product, index) {
   const image = product.image
     ? `<div class="product-image"><img src="${encodeURI(product.image)}" alt="${escapeHTML(product.title)}" loading="lazy"></div>`
     : `<div class="product-image" aria-hidden="true"></div>`;
-  const deAction = product.german
+  const esAction = product.spanish && state.language !== "de"
+    ? `<a class="pdf-link" href="${encodeURI(product.spanish)}" target="_blank" rel="noopener">Ficha en español · ES</a>`
+    : "";
+  const deAction = product.german && state.language !== "es"
     ? `<a class="pdf-link de" href="${encodeURI(product.german)}" target="_blank" rel="noopener">Datenblatt · DE</a>`
-    : `<span class="unavailable">DE no disponible</span>`;
+    : "";
   return `<article class="product" style="animation-delay:${Math.min(index, 8) * 35}ms">
     ${image}
     <div class="product-info">
@@ -44,7 +46,7 @@ function card(product, index) {
       <h2>${escapeHTML(product.title)}</h2>
       <p class="product-description">${escapeHTML(product.description)}</p>
       <div class="actions">
-        <a class="pdf-link" href="${encodeURI(product.spanish)}" target="_blank" rel="noopener">Ficha en español · ES</a>
+        ${esAction}
         ${deAction}
       </div>
     </div>
@@ -63,9 +65,12 @@ input.addEventListener("input", event => { state.query = event.target.value; ren
 document.querySelector("#searchForm").addEventListener("submit", event => event.preventDefault());
 clearButton.addEventListener("click", () => { input.value = ""; state.query = ""; input.focus(); render(); });
 document.querySelectorAll(".filter").forEach(button => button.addEventListener("click", () => {
-  document.querySelector(".filter.active")?.classList.remove("active");
+  const activeButton = document.querySelector(".filter.active");
+  activeButton?.classList.remove("active");
+  activeButton?.setAttribute("aria-pressed", "false");
   button.classList.add("active");
-  state.filter = button.dataset.filter;
+  button.setAttribute("aria-pressed", "true");
+  state.language = button.dataset.language;
   render();
 }));
 

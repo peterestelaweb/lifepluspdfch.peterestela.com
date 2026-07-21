@@ -54,7 +54,7 @@ jobs:
           grep -F '${{ github.sha }}' /tmp/deploy-marker.txt
           curl --fail --silent --show-error --location --compressed \
             https://lifepluspdfch.peterestela.com/ \
-            | grep -F 'Lifeplus PDF · Suiza · Schweiz'
+            | grep -F 'app.js?v=20260722-language-filters'
           curl --fail --silent --show-error --location \
             https://lifepluspdfch.peterestela.com/data/catalogo-bilingue.json \
             | grep -F '"sku": "4999"'
