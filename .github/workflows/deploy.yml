@@ -1,0 +1,60 @@
+name: Deploy by FTP
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: production-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Upload Lifeplus PDF Suiza
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Write deploy marker
+        run: |
+          printf 'commit=%s\nrun=%s\nbuilt_at=%s\n' \
+            '${{ github.sha }}' \
+            '${{ github.run_id }}' \
+            "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > deploy-marker.txt
+
+      - name: Deploy to captive FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT }}
+          protocol: ftps
+          local-dir: ./
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}/
+          exclude: |
+            **/.git*
+            **/.DS_Store
+            **/.github/**
+            **/.codex/**
+            **/openspec/**
+            **/scripts/**
+            README.md
+
+      - name: Verify public deploy
+        run: |
+          curl --fail --silent --show-error --location \
+            https://lifepluspdfch.peterestela.com/deploy-marker.txt \
+            | tee /tmp/deploy-marker.txt
+          grep -F '${{ github.sha }}' /tmp/deploy-marker.txt
+          curl --fail --silent --show-error --location --compressed \
+            https://lifepluspdfch.peterestela.com/ \
+            | grep -F 'Lifeplus PDF · Suiza · Schweiz'
+          curl --fail --silent --show-error --location \
+            https://lifepluspdfch.peterestela.com/data/catalogo-bilingue.json \
+            | grep -F '"sku": "4999"'
