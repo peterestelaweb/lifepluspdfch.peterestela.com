@@ -16,6 +16,9 @@ const SWISS_SHOP_SKUS = {
   "6697": "5894", "6698": "5895", "6699": "5896", "6861": "4000",
   "7796": "4655", "7797": "4656"
 };
+const EXTERNAL_PACK_LINKS = {
+  "4446": "https://www.lifeplus.com/SHX4C7/gb/en/product-details/4446"
+};
 const input = document.querySelector("#searchInput");
 const results = document.querySelector("#results");
 const count = document.querySelector("#resultCount");
@@ -33,11 +36,17 @@ function matchesFilter(product) {
   return Boolean(product.spanish || product.german);
 }
 
+function getShopUrl(product) {
+  const swissSku = SWISS_SHOP_SKUS[product.sku];
+  if (swissSku) return `${LIFEPLUS_SHOP_BASE}${encodeURIComponent(swissSku)}`;
+  return EXTERNAL_PACK_LINKS[product.sku] || "";
+}
+
 function getVisible() {
   const words = normalize(state.query).split(" ").filter(Boolean);
   return state.products
     .filter(product =>
-      matchesFilter(product) && words.every(word => product.search.includes(word))
+      getShopUrl(product) && matchesFilter(product) && words.every(word => product.search.includes(word))
     )
     .sort((a, b) => {
       const purchaseDifference = Number(Boolean(SWISS_SHOP_SKUS[b.sku])) - Number(Boolean(SWISS_SHOP_SKUS[a.sku]));
@@ -61,10 +70,8 @@ function card(product, index) {
   const deAction = product.german && state.language !== "es"
     ? `<a class="pdf-link de" href="${encodeURI(product.german)}" target="_blank" rel="noopener">Datenblatt · DE</a>`
     : "";
-  const shopSku = SWISS_SHOP_SKUS[product.sku];
-  const shopAction = shopSku
-    ? `<a class="shop-link" href="${LIFEPLUS_SHOP_BASE}${encodeURIComponent(shopSku)}" target="_blank" rel="noopener" aria-label="${escapeHTML(product.title)} kaufen · Comprar ${escapeHTML(product.title)}">Comprar producto · Produkt kaufen <span aria-hidden="true">↗</span></a>`
-    : `<span class="shop-unavailable">Producto no disponible para comprar en la tienda · Produkt derzeit nicht im Shop erhältlich</span>`;
+  const shopUrl = getShopUrl(product);
+  const shopAction = `<a class="shop-link" href="${shopUrl}" target="_blank" rel="noopener" aria-label="${escapeHTML(product.title)} kaufen · Comprar ${escapeHTML(product.title)}">Comprar producto · Produkt kaufen <span aria-hidden="true">↗</span></a>`;
   return `<article class="product" style="animation-delay:${Math.min(index, 8) * 35}ms">
     ${image}
     <div class="product-info">

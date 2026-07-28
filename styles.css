@@ -60,7 +60,6 @@ h1 span { color: #bce1cb; }
 .shop-link span { font-size: 15px; line-height: 1; transition: transform .2s ease; }
 .shop-link:hover { background: var(--green-dark); border-color: var(--green-dark); transform: translateY(-1px); }
 .shop-link:hover span { transform: translate(2px, -2px); }
-.shop-unavailable { flex-basis: 100%; margin-top: 3px; padding-top: 9px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; line-height: 1.4; }
 .unavailable { color: #929b96; font-size: 12px; align-self: center; }
 .empty { text-align: center; padding: 100px 20px; }
 .empty strong { font: 700 25px Manrope, sans-serif; }
