@@ -30,6 +30,52 @@ PDF_TO_CH = {
     "6645":"4156", "3439":"5022", "1945":"0300", "6799":"5393", "6680":"5886",
 }
 
+# Packs confirmed in the secondary Swiss cart inventory. They do not have a
+# single, unequivocal bilingual PDF, so they are published as commercial-only
+# cards instead of being attached to one of their component documents.
+COMMERCIAL_ONLY = {
+    "4168": {
+        "title": "Sport Pack Sachet Berry 30 ct",
+        "description": "Pack deportivo en sobres, sabor frutos del bosque · Sportpaket mit Portionsbeuteln, Beerengeschmack",
+        "category": "Packs Lifeplus",
+    },
+    "5019": {
+        "title": "Everyday Wellbeing Plus DE",
+        "description": "Pack Everyday Wellbeing Plus para Suiza · Everyday Wellbeing Plus Paket für die Schweiz",
+        "category": "Packs Lifeplus",
+    },
+    "5046": {
+        "title": "Everyday Wellbeing Gold Plus DE",
+        "description": "Pack Everyday Wellbeing Gold Plus para Suiza · Everyday Wellbeing Gold Plus Paket für die Schweiz",
+        "category": "Packs Lifeplus",
+    },
+    "5279": {
+        "title": "Sport Pack Canister Berry DE",
+        "description": "Pack deportivo en botes, sabor frutos del bosque · Sportpaket in Dosen, Beerengeschmack",
+        "category": "Packs Lifeplus",
+    },
+    "5395": {
+        "title": "Getting Started - Berry",
+        "description": "Pack de inicio, sabor frutos del bosque · Einstiegspaket, Beerengeschmack",
+        "category": "Packs Lifeplus",
+    },
+    "5397": {
+        "title": "Recovery - Berry",
+        "description": "Pack de recuperación, sabor frutos del bosque · Regenerationspaket, Beerengeschmack",
+        "category": "Packs Lifeplus",
+    },
+    "5516": {
+        "title": "Everyday Wellbeing DE",
+        "description": "Pack Everyday Wellbeing para Suiza · Everyday Wellbeing Paket für die Schweiz",
+        "category": "Packs Lifeplus",
+    },
+    "5692": {
+        "title": "Everyday Wellbeing Gold DE",
+        "description": "Pack Everyday Wellbeing Gold para Suiza · Everyday Wellbeing Gold Paket für die Schweiz",
+        "category": "Packs Lifeplus",
+    },
+}
+
 PHONE_OVERRIDES = {"5828", "5830"}
 CART_URL = "https://www.lifeplus.com/SHX4C7/ch/de/view-cart"
 
@@ -61,7 +107,37 @@ def main() -> None:
             "purchase":"direct" if is_direct else ("cart" if is_cart else "phone"),
             "url":f"https://www.lifeplus.com/SHX4C7/ch/de/product-details/{article}" if is_direct else (CART_URL if is_cart else None),
         }
-    payload={"shop_id":"SHX4C7","phone_display":"0800 321 026","phone_href":"tel:0800321026","products":products,"missing":missing}
+    standalone_products = []
+    for article, metadata in COMMERCIAL_ONLY.items():
+        row = phone.get(article)
+        if not row:
+            missing.append({"commercial_only":True,"article":article})
+            continue
+        key = f"ch-{article}"
+        products[key] = {
+            "article":article,
+            "price_chf":f"{float(row.get('Price')):.2f}",
+            "ip":f"{float(row.get('IP')):.2f}",
+            "purchase":"cart",
+            "url":CART_URL,
+        }
+        standalone_products.append({
+            "sku":key,
+            **metadata,
+            "image":"",
+            "spanish":"",
+            "german":"",
+            "commercial_only":True,
+            "search":" ".join((metadata["title"], metadata["description"], article)).lower(),
+        })
+    payload={
+        "shop_id":"SHX4C7",
+        "phone_display":"0800 321 026",
+        "phone_href":"tel:0800321026",
+        "products":products,
+        "standalone_products":standalone_products,
+        "missing":missing,
+    }
     text=json.dumps(payload,ensure_ascii=False,indent=2)
     (ROOT/"data/comercio-suiza.json").write_text(text+"\n",encoding="utf-8")
     (ROOT/"data/comercio-suiza.js").write_text(f"window.LIFEPLUS_COMMERCE = {text};\n",encoding="utf-8")

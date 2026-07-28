@@ -12,6 +12,7 @@ function normalize(value) {
 }
 
 function matchesFilter(product) {
+  if (product.commercial_only) return state.language === "both";
   if (state.language === "es") return Boolean(product.spanish);
   if (state.language === "de") return Boolean(product.german);
   return Boolean(product.spanish || product.german);
@@ -21,9 +22,11 @@ function getVisible() {
   const words = normalize(state.query).split(" ").filter(Boolean);
   const seenArticles = new Set();
   return state.products
-    .filter(product =>
-      commerce.products[product.sku] && matchesFilter(product) && words.every(word => product.search.includes(word))
-    )
+    .filter(product => {
+      const sale = commerce.products[product.sku];
+      const searchable = `${product.search} ${normalize(sale?.article)}`;
+      return sale && matchesFilter(product) && words.every(word => searchable.includes(word));
+    })
     .sort((a, b) => (a.category || "General").localeCompare(b.category || "General", "es", { sensitivity: "base" }) || a.title.localeCompare(b.title, "es", { sensitivity: "base" }))
     .filter(product => {
       const article = commerce.products[product.sku].article;
@@ -42,7 +45,9 @@ function escapeHTML(value) {
 function card(product, index) {
   const image = product.image
     ? `<div class="product-image"><img src="${encodeURI(product.image)}" alt="${escapeHTML(product.title)}" loading="lazy"></div>`
-    : `<div class="product-image" aria-hidden="true"></div>`;
+    : product.commercial_only
+      ? `<div class="product-image pack-image" aria-hidden="true"><span>PACK</span><b>Lifeplus</b></div>`
+      : `<div class="product-image" aria-hidden="true"></div>`;
   const esAction = product.spanish && state.language !== "de"
     ? `<a class="pdf-link" href="${encodeURI(product.spanish)}" target="_blank" rel="noopener">Ficha en español · ES</a>`
     : "";
@@ -61,6 +66,7 @@ function card(product, index) {
       <div class="product-meta"><b>Lifeplus</b><span>Art. ${escapeHTML(sale.article)}</span></div>
       <h2>${escapeHTML(product.title)}</h2>
       <p class="product-description">${escapeHTML(product.description)}</p>
+      ${product.commercial_only ? `<p class="pack-note">Pack comercial sin ficha PDF propia · Verkaufspaket ohne eigenes PDF</p>` : ""}
       <div class="product-price"><strong>CHF ${escapeHTML(sale.price_chf)}</strong><span>IP ${escapeHTML(sale.ip)}</span></div>
       <div class="actions">
         ${esAction}
@@ -93,7 +99,7 @@ document.querySelectorAll(".filter").forEach(button => button.addEventListener("
 }));
 
 function loadCatalog(data) {
-  state.products = data?.products || [];
+  state.products = [...(data?.products || []), ...(commerce.standalone_products || [])];
   render();
 }
 

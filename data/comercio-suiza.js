@@ -695,7 +695,153 @@ window.LIFEPLUS_COMMERCE = {
       "ip": "51.75",
       "purchase": "direct",
       "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/5886"
+    },
+    "ch-4168": {
+      "article": "4168",
+      "price_chf": "316.00",
+      "ip": "211.25",
+      "purchase": "cart",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/view-cart"
+    },
+    "ch-5019": {
+      "article": "5019",
+      "price_chf": "202.00",
+      "ip": "152.75",
+      "purchase": "cart",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/view-cart"
+    },
+    "ch-5046": {
+      "article": "5046",
+      "price_chf": "256.00",
+      "ip": "193.75",
+      "purchase": "cart",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/view-cart"
+    },
+    "ch-5279": {
+      "article": "5279",
+      "price_chf": "264.50",
+      "ip": "181.50",
+      "purchase": "cart",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/view-cart"
+    },
+    "ch-5395": {
+      "article": "5395",
+      "price_chf": "169.75",
+      "ip": "118.75",
+      "purchase": "cart",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/view-cart"
+    },
+    "ch-5397": {
+      "article": "5397",
+      "price_chf": "221.75",
+      "ip": "152.00",
+      "purchase": "cart",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/view-cart"
+    },
+    "ch-5516": {
+      "article": "5516",
+      "price_chf": "117.25",
+      "ip": "91.25",
+      "purchase": "cart",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/view-cart"
+    },
+    "ch-5692": {
+      "article": "5692",
+      "price_chf": "171.50",
+      "ip": "132.25",
+      "purchase": "cart",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/view-cart"
     }
   },
+  "standalone_products": [
+    {
+      "sku": "ch-4168",
+      "title": "Sport Pack Sachet Berry 30 ct",
+      "description": "Pack deportivo en sobres, sabor frutos del bosque · Sportpaket mit Portionsbeuteln, Beerengeschmack",
+      "category": "Packs Lifeplus",
+      "image": "",
+      "spanish": "",
+      "german": "",
+      "commercial_only": true,
+      "search": "sport pack sachet berry 30 ct pack deportivo en sobres, sabor frutos del bosque · sportpaket mit portionsbeuteln, beerengeschmack 4168"
+    },
+    {
+      "sku": "ch-5019",
+      "title": "Everyday Wellbeing Plus DE",
+      "description": "Pack Everyday Wellbeing Plus para Suiza · Everyday Wellbeing Plus Paket für die Schweiz",
+      "category": "Packs Lifeplus",
+      "image": "",
+      "spanish": "",
+      "german": "",
+      "commercial_only": true,
+      "search": "everyday wellbeing plus de pack everyday wellbeing plus para suiza · everyday wellbeing plus paket für die schweiz 5019"
+    },
+    {
+      "sku": "ch-5046",
+      "title": "Everyday Wellbeing Gold Plus DE",
+      "description": "Pack Everyday Wellbeing Gold Plus para Suiza · Everyday Wellbeing Gold Plus Paket für die Schweiz",
+      "category": "Packs Lifeplus",
+      "image": "",
+      "spanish": "",
+      "german": "",
+      "commercial_only": true,
+      "search": "everyday wellbeing gold plus de pack everyday wellbeing gold plus para suiza · everyday wellbeing gold plus paket für die schweiz 5046"
+    },
+    {
+      "sku": "ch-5279",
+      "title": "Sport Pack Canister Berry DE",
+      "description": "Pack deportivo en botes, sabor frutos del bosque · Sportpaket in Dosen, Beerengeschmack",
+      "category": "Packs Lifeplus",
+      "image": "",
+      "spanish": "",
+      "german": "",
+      "commercial_only": true,
+      "search": "sport pack canister berry de pack deportivo en botes, sabor frutos del bosque · sportpaket in dosen, beerengeschmack 5279"
+    },
+    {
+      "sku": "ch-5395",
+      "title": "Getting Started - Berry",
+      "description": "Pack de inicio, sabor frutos del bosque · Einstiegspaket, Beerengeschmack",
+      "category": "Packs Lifeplus",
+      "image": "",
+      "spanish": "",
+      "german": "",
+      "commercial_only": true,
+      "search": "getting started - berry pack de inicio, sabor frutos del bosque · einstiegspaket, beerengeschmack 5395"
+    },
+    {
+      "sku": "ch-5397",
+      "title": "Recovery - Berry",
+      "description": "Pack de recuperación, sabor frutos del bosque · Regenerationspaket, Beerengeschmack",
+      "category": "Packs Lifeplus",
+      "image": "",
+      "spanish": "",
+      "german": "",
+      "commercial_only": true,
+      "search": "recovery - berry pack de recuperación, sabor frutos del bosque · regenerationspaket, beerengeschmack 5397"
+    },
+    {
+      "sku": "ch-5516",
+      "title": "Everyday Wellbeing DE",
+      "description": "Pack Everyday Wellbeing para Suiza · Everyday Wellbeing Paket für die Schweiz",
+      "category": "Packs Lifeplus",
+      "image": "",
+      "spanish": "",
+      "german": "",
+      "commercial_only": true,
+      "search": "everyday wellbeing de pack everyday wellbeing para suiza · everyday wellbeing paket für die schweiz 5516"
+    },
+    {
+      "sku": "ch-5692",
+      "title": "Everyday Wellbeing Gold DE",
+      "description": "Pack Everyday Wellbeing Gold para Suiza · Everyday Wellbeing Gold Paket für die Schweiz",
+      "category": "Packs Lifeplus",
+      "image": "",
+      "spanish": "",
+      "german": "",
+      "commercial_only": true,
+      "search": "everyday wellbeing gold de pack everyday wellbeing gold para suiza · everyday wellbeing gold paket für die schweiz 5692"
+    }
+  ],
   "missing": []
 };
