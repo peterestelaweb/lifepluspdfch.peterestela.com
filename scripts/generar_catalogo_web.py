@@ -17,6 +17,7 @@ SOURCE = Path(
 )
 REGISTRY = ROOT / "fichas_producto/registro_bilingue.csv"
 OUTPUT = ROOT / "data/catalogo-bilingue.json"
+OUTPUT_JS = ROOT / "data/catalogo-bilingue.js"
 
 
 def clean_title(value: str) -> str:
@@ -73,8 +74,11 @@ def main() -> None:
 
     products.sort(key=lambda item: item["title"].casefold())
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text(
-        json.dumps({"products": products}, ensure_ascii=False, indent=2), encoding="utf-8"
+    catalog = {"products": products}
+    catalog_json = json.dumps(catalog, ensure_ascii=False, indent=2)
+    OUTPUT.write_text(catalog_json, encoding="utf-8")
+    OUTPUT_JS.write_text(
+        f"window.LIFEPLUS_CATALOG = {catalog_json};\n", encoding="utf-8"
     )
     print(f"{len(products)} productos escritos en {OUTPUT}")
 
