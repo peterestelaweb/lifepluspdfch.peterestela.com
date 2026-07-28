@@ -52,7 +52,9 @@ function card(product, index) {
   const sale = commerce.products[product.sku];
   const shopAction = sale.purchase === "direct"
     ? `<a class="shop-link" href="${sale.url}" target="_blank" rel="noopener" aria-label="${escapeHTML(product.title)} kaufen · Comprar ${escapeHTML(product.title)}">Comprar producto · Produkt kaufen <span aria-hidden="true">↗</span></a>`
-    : `<a class="shop-link phone" href="${commerce.phone_href}">Llamar para pedir · Zum Bestellen anrufen</a><p class="phone-note">Comunica el Art. ${escapeHTML(sale.article)} y la Shop-ID ${escapeHTML(commerce.shop_id)} al operador.</p>`;
+    : sale.purchase === "cart"
+      ? `<a class="shop-link" href="${sale.url}" target="_blank" rel="noopener">Comprar desde la cesta · Über den Warenkorb kaufen <span aria-hidden="true">↗</span></a><p class="phone-note">En la cesta, busca el Art. ${escapeHTML(sale.article)} y pulsa “In den Warenkorb”.</p>`
+      : `<a class="shop-link phone" href="${commerce.phone_href}">Llamar para pedir · Zum Bestellen anrufen</a><p class="phone-note">Comunica el Art. ${escapeHTML(sale.article)} y la Shop-ID ${escapeHTML(commerce.shop_id)} al operador.</p>`;
   return `<article class="product" style="animation-delay:${Math.min(index, 8) * 35}ms">
     ${image}
     <div class="product-info">

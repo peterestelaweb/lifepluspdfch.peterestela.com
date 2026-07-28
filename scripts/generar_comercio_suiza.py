@@ -27,9 +27,11 @@ PDF_TO_CH = {
     "6063":"5096", "3457":"5509", "6127":"4463", "4999":"5000", "3538":"5388", "6653":"5872",
     "6141":"5012", "3428":"5009", "6102":"5496", "1032":"5038", "4421":"5534", "6041":"5708",
     "6343":"5789", "6124":"5036", "358":"4634", "3441":"5707", "6681":"5345", "6191":"5830",
+    "6645":"4156", "3439":"5022", "1945":"0300", "6799":"5393", "6680":"5886",
 }
 
 PHONE_OVERRIDES = {"5828", "5830"}
+CART_URL = "https://www.lifeplus.com/SHX4C7/ch/de/view-cart"
 
 
 def array(source: str, name: str) -> list[dict]:
@@ -51,12 +53,13 @@ def main() -> None:
             missing.append({"pdf_sku":pdf_sku,"article":article})
             continue
         is_direct = article in direct and article not in PHONE_OVERRIDES
+        is_cart = article in phone and article not in PHONE_OVERRIDES
         products[pdf_sku] = {
             "article":article,
             "price_chf":f"{float(row.get('price') or row.get('Price')):.2f}",
             "ip":f"{float(row.get('ip') or row.get('IP')):.2f}",
-            "purchase":"direct" if is_direct else "phone",
-            "url":f"https://www.lifeplus.com/SHX4C7/ch/de/product-details/{article}" if is_direct else None,
+            "purchase":"direct" if is_direct else ("cart" if is_cart else "phone"),
+            "url":f"https://www.lifeplus.com/SHX4C7/ch/de/product-details/{article}" if is_direct else (CART_URL if is_cart else None),
         }
     payload={"shop_id":"SHX4C7","phone_display":"0800 321 026","phone_href":"tel:0800321026","products":products,"missing":missing}
     text=json.dumps(payload,ensure_ascii=False,indent=2)
