@@ -16,8 +16,14 @@ const SWISS_SHOP_SKUS = {
   "6697": "5894", "6698": "5895", "6699": "5896", "6861": "4000",
   "7796": "4655", "7797": "4656"
 };
-const EXTERNAL_PACK_LINKS = {
-  "4446": "https://www.lifeplus.com/SHX4C7/gb/en/product-details/4446"
+const EXTERNAL_PRODUCT_LINKS = {
+  "4446": "https://www.lifeplus.com/SHX4C7/gb/en/product-details/4446",
+  "6003": "https://www.lifeplus.com/SHX4C7/de/de/product-details/5044",
+  "6601": "https://www.lifeplus.com/SHX4C7/de/de/product-details/5401",
+  "6603": "https://www.lifeplus.com/SHX4C7/de/de/product-details/5403",
+  "6604": "https://www.lifeplus.com/SHX4C7/de/de/product-details/5404",
+  "6800": "https://www.lifeplus.com/SHX4C7/de/de/product-details/4145",
+  "6801": "https://www.lifeplus.com/SHX4C7/de/de/product-details/4146"
 };
 const input = document.querySelector("#searchInput");
 const results = document.querySelector("#results");
@@ -39,7 +45,7 @@ function matchesFilter(product) {
 function getShopUrl(product) {
   const swissSku = SWISS_SHOP_SKUS[product.sku];
   if (swissSku) return `${LIFEPLUS_SHOP_BASE}${encodeURIComponent(swissSku)}`;
-  return EXTERNAL_PACK_LINKS[product.sku] || "";
+  return EXTERNAL_PRODUCT_LINKS[product.sku] || "";
 }
 
 function getVisible() {

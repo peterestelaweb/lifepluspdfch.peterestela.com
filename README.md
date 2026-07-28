@@ -3,7 +3,7 @@
 Catálogo independiente para `lifepluspdfch.peterestela.com` con fichas de producto Lifeplus en español y alemán.
 
 - Biblioteca interna de 128 fichas en español y 96 fichas oficiales en alemán.
-- La página pública muestra únicamente productos con compra directa verificada en Suiza y packs con compra externa directa comprobada.
+- La página pública muestra únicamente productos con compra directa verificada en Suiza y productos concretos con compra externa directa comprobada.
 - Buscador y filtros por disponibilidad de idioma.
 - Enlaces directos verificados a los productos disponibles en la tienda suiza `SHX4C7` de Lifeplus.
 - Nunca se utiliza el catálogo general como sustituto ni se muestran productos sin una ficha de compra concreta.
