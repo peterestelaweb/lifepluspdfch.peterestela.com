@@ -1,0 +1,666 @@
+window.LIFEPLUS_COMMERCE = {
+  "shop_id": "SHX4C7",
+  "phone_display": "0800 321 026",
+  "phone_href": "tel:0800321026",
+  "products": {
+    "1021": {
+      "article": "1021",
+      "price_chf": "26.50",
+      "ip": "13.25",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/1021"
+    },
+    "170": {
+      "article": "6695",
+      "price_chf": "20.00",
+      "ip": "9.25",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/6695"
+    },
+    "2629": {
+      "article": "2629",
+      "price_chf": "18.50",
+      "ip": "8.50",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/2629"
+    },
+    "2630": {
+      "article": "2630",
+      "price_chf": "23.75",
+      "ip": "11.00",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/2630"
+    },
+    "2631": {
+      "article": "2631",
+      "price_chf": "18.50",
+      "ip": "8.50",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/2631"
+    },
+    "2632": {
+      "article": "2632",
+      "price_chf": "26.00",
+      "ip": "16.00",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/2632"
+    },
+    "3415": {
+      "article": "5828",
+      "price_chf": "68.00",
+      "ip": "47.75",
+      "purchase": "phone",
+      "url": null
+    },
+    "3443": {
+      "article": "5825",
+      "price_chf": "28.25",
+      "ip": "20.25",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/5825"
+    },
+    "3446": {
+      "article": "5827",
+      "price_chf": "46.00",
+      "ip": "32.50",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/5827"
+    },
+    "4033": {
+      "article": "5821",
+      "price_chf": "29.25",
+      "ip": "20.25",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/5821"
+    },
+    "4095": {
+      "article": "5871",
+      "price_chf": "90.00",
+      "ip": "62.25",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/5871"
+    },
+    "4129": {
+      "article": "4129",
+      "price_chf": "32.25",
+      "ip": "19.50",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/4129"
+    },
+    "4130": {
+      "article": "4130",
+      "price_chf": "32.00",
+      "ip": "21.75",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/4130"
+    },
+    "4131": {
+      "article": "4131",
+      "price_chf": "74.00",
+      "ip": "52.50",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/4131"
+    },
+    "4132": {
+      "article": "4132",
+      "price_chf": "72.50",
+      "ip": "50.00",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/4132"
+    },
+    "4133": {
+      "article": "4133",
+      "price_chf": "21.00",
+      "ip": "12.00",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/4133"
+    },
+    "4134": {
+      "article": "4134",
+      "price_chf": "39.00",
+      "ip": "20.50",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/4134"
+    },
+    "4144": {
+      "article": "4144",
+      "price_chf": "75.00",
+      "ip": "53.25",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/4144"
+    },
+    "4173": {
+      "article": "4173",
+      "price_chf": "95.25",
+      "ip": "64.00",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/4173"
+    },
+    "4174": {
+      "article": "4174",
+      "price_chf": "75.75",
+      "ip": "51.00",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/4174"
+    },
+    "4998": {
+      "article": "5049",
+      "price_chf": "62.00",
+      "ip": "39.25",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/5049"
+    },
+    "6108": {
+      "article": "5826",
+      "price_chf": "60.75",
+      "ip": "36.75",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/5826"
+    },
+    "6112": {
+      "article": "5823",
+      "price_chf": "89.00",
+      "ip": "61.50",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/5823"
+    },
+    "6134": {
+      "article": "6134",
+      "price_chf": "40.75",
+      "ip": "27.75",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/6134"
+    },
+    "6140": {
+      "article": "5834",
+      "price_chf": "58.50",
+      "ip": "41.25",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/5834"
+    },
+    "6192": {
+      "article": "5829",
+      "price_chf": "89.00",
+      "ip": "66.50",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/5829"
+    },
+    "6237": {
+      "article": "5822",
+      "price_chf": "16.75",
+      "ip": "9.25",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/5822"
+    },
+    "6618": {
+      "article": "5413",
+      "price_chf": "51.25",
+      "ip": "37.75",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/5413"
+    },
+    "6648": {
+      "article": "5869",
+      "price_chf": "84.75",
+      "ip": "58.75",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/5869"
+    },
+    "6651": {
+      "article": "5870",
+      "price_chf": "77.50",
+      "ip": "51.00",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/5870"
+    },
+    "6654": {
+      "article": "6654",
+      "price_chf": "8.00",
+      "ip": "4.75",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/6654"
+    },
+    "6656": {
+      "article": "5874",
+      "price_chf": "52.25",
+      "ip": "34.00",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/5874"
+    },
+    "6658": {
+      "article": "5875",
+      "price_chf": "137.00",
+      "ip": "73.75",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/5875"
+    },
+    "6673": {
+      "article": "5879",
+      "price_chf": "56.00",
+      "ip": "38.75",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/5879"
+    },
+    "6678": {
+      "article": "5884",
+      "price_chf": "94.25",
+      "ip": "51.75",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/5884"
+    },
+    "6679": {
+      "article": "5885",
+      "price_chf": "94.25",
+      "ip": "51.75",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/5885"
+    },
+    "6687": {
+      "article": "5887",
+      "price_chf": "32.50",
+      "ip": "18.00",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/5887"
+    },
+    "6688": {
+      "article": "5888",
+      "price_chf": "30.75",
+      "ip": "16.75",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/5888"
+    },
+    "6689": {
+      "article": "5889",
+      "price_chf": "34.75",
+      "ip": "19.25",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/5889"
+    },
+    "6692": {
+      "article": "5390",
+      "price_chf": "13.00",
+      "ip": "5.00",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/5390"
+    },
+    "6697": {
+      "article": "5894",
+      "price_chf": "21.50",
+      "ip": "11.75",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/5894"
+    },
+    "6698": {
+      "article": "5895",
+      "price_chf": "28.25",
+      "ip": "16.25",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/5895"
+    },
+    "6699": {
+      "article": "5896",
+      "price_chf": "62.50",
+      "ip": "23.25",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/5896"
+    },
+    "6861": {
+      "article": "4000",
+      "price_chf": "50.25",
+      "ip": "39.25",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/4000"
+    },
+    "7796": {
+      "article": "4655",
+      "price_chf": "99.50",
+      "ip": "58.00",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/4655"
+    },
+    "7797": {
+      "article": "4656",
+      "price_chf": "99.50",
+      "ip": "58.00",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/4656"
+    },
+    "6003": {
+      "article": "5044",
+      "price_chf": "72.25",
+      "ip": "55.50",
+      "purchase": "phone",
+      "url": null
+    },
+    "6603": {
+      "article": "5403",
+      "price_chf": "93.25",
+      "ip": "63.50",
+      "purchase": "phone",
+      "url": null
+    },
+    "6604": {
+      "article": "5404",
+      "price_chf": "90.00",
+      "ip": "61.25",
+      "purchase": "phone",
+      "url": null
+    },
+    "6800": {
+      "article": "4145",
+      "price_chf": "107.75",
+      "ip": "74.50",
+      "purchase": "phone",
+      "url": null
+    },
+    "6801": {
+      "article": "4146",
+      "price_chf": "107.75",
+      "ip": "74.50",
+      "purchase": "phone",
+      "url": null
+    },
+    "6601": {
+      "article": "5401",
+      "price_chf": "93.25",
+      "ip": "59.25",
+      "purchase": "phone",
+      "url": null
+    },
+    "6602": {
+      "article": "5402",
+      "price_chf": "89.00",
+      "ip": "58.75",
+      "purchase": "phone",
+      "url": null
+    },
+    "6806": {
+      "article": "4149",
+      "price_chf": "110.75",
+      "ip": "69.00",
+      "purchase": "phone",
+      "url": null
+    },
+    "6807": {
+      "article": "4150",
+      "price_chf": "110.75",
+      "ip": "69.00",
+      "purchase": "phone",
+      "url": null
+    },
+    "6644": {
+      "article": "4158",
+      "price_chf": "90.00",
+      "ip": "53.50",
+      "purchase": "phone",
+      "url": null
+    },
+    "6605": {
+      "article": "5405",
+      "price_chf": "92.00",
+      "ip": "58.75",
+      "purchase": "phone",
+      "url": null
+    },
+    "6606": {
+      "article": "5406",
+      "price_chf": "90.00",
+      "ip": "59.25",
+      "purchase": "phone",
+      "url": null
+    },
+    "6805": {
+      "article": "4148",
+      "price_chf": "114.00",
+      "ip": "67.75",
+      "purchase": "phone",
+      "url": null
+    },
+    "6802": {
+      "article": "4147",
+      "price_chf": "114.00",
+      "ip": "67.75",
+      "purchase": "phone",
+      "url": null
+    },
+    "7883": {
+      "article": "5521",
+      "price_chf": "39.75",
+      "ip": "23.50",
+      "purchase": "phone",
+      "url": null
+    },
+    "7884": {
+      "article": "5522",
+      "price_chf": "39.75",
+      "ip": "23.50",
+      "purchase": "phone",
+      "url": null
+    },
+    "6104": {
+      "article": "5011",
+      "price_chf": "92.00",
+      "ip": "62.75",
+      "purchase": "phone",
+      "url": null
+    },
+    "9600": {
+      "article": "5006",
+      "price_chf": "45.00",
+      "ip": "29.75",
+      "purchase": "phone",
+      "url": null
+    },
+    "6133": {
+      "article": "5010",
+      "price_chf": "58.50",
+      "ip": "36.00",
+      "purchase": "phone",
+      "url": null
+    },
+    "1012": {
+      "article": "5591",
+      "price_chf": "90.00",
+      "ip": "67.25",
+      "purchase": "phone",
+      "url": null
+    },
+    "6109": {
+      "article": "4443",
+      "price_chf": "57.50",
+      "ip": "41.00",
+      "purchase": "phone",
+      "url": null
+    },
+    "6355": {
+      "article": "4008",
+      "price_chf": "71.25",
+      "ip": "46.25",
+      "purchase": "phone",
+      "url": null
+    },
+    "6132": {
+      "article": "5003",
+      "price_chf": "99.50",
+      "ip": "62.25",
+      "purchase": "phone",
+      "url": null
+    },
+    "6500": {
+      "article": "5792",
+      "price_chf": "88.00",
+      "ip": "61.75",
+      "purchase": "phone",
+      "url": null
+    },
+    "6193": {
+      "article": "5028",
+      "price_chf": "134.00",
+      "ip": "81.00",
+      "purchase": "phone",
+      "url": null
+    },
+    "6122": {
+      "article": "5004",
+      "price_chf": "54.50",
+      "ip": "24.50",
+      "purchase": "phone",
+      "url": null
+    },
+    "6111": {
+      "article": "5008",
+      "price_chf": "31.75",
+      "ip": "19.75",
+      "purchase": "phone",
+      "url": null
+    },
+    "6107": {
+      "article": "5032",
+      "price_chf": "117.25",
+      "ip": "82.50",
+      "purchase": "phone",
+      "url": null
+    },
+    "3447": {
+      "article": "5047",
+      "price_chf": "40.75",
+      "ip": "28.75",
+      "purchase": "phone",
+      "url": null
+    },
+    "6113": {
+      "article": "5500",
+      "price_chf": "45.75",
+      "ip": "34.25",
+      "purchase": "phone",
+      "url": null
+    },
+    "6063": {
+      "article": "5096",
+      "price_chf": "182.75",
+      "ip": "142.25",
+      "purchase": "phone",
+      "url": null
+    },
+    "3457": {
+      "article": "5509",
+      "price_chf": "45.00",
+      "ip": "33.25",
+      "purchase": "phone",
+      "url": null
+    },
+    "6127": {
+      "article": "4463",
+      "price_chf": "49.25",
+      "ip": "37.25",
+      "purchase": "phone",
+      "url": null
+    },
+    "4999": {
+      "article": "5000",
+      "price_chf": "57.00",
+      "ip": "41.00",
+      "purchase": "phone",
+      "url": null
+    },
+    "3538": {
+      "article": "5388",
+      "price_chf": "62.75",
+      "ip": "40.75",
+      "purchase": "phone",
+      "url": null
+    },
+    "6653": {
+      "article": "5872",
+      "price_chf": "53.25",
+      "ip": "37.00",
+      "purchase": "direct",
+      "url": "https://www.lifeplus.com/SHX4C7/ch/de/product-details/5872"
+    },
+    "6141": {
+      "article": "5012",
+      "price_chf": "60.75",
+      "ip": "33.25",
+      "purchase": "phone",
+      "url": null
+    },
+    "3428": {
+      "article": "5009",
+      "price_chf": "75.25",
+      "ip": "53.75",
+      "purchase": "phone",
+      "url": null
+    },
+    "6102": {
+      "article": "5496",
+      "price_chf": "34.50",
+      "ip": "24.75",
+      "purchase": "phone",
+      "url": null
+    },
+    "1032": {
+      "article": "5038",
+      "price_chf": "45.00",
+      "ip": "32.25",
+      "purchase": "phone",
+      "url": null
+    },
+    "4421": {
+      "article": "5534",
+      "price_chf": "36.75",
+      "ip": "24.25",
+      "purchase": "phone",
+      "url": null
+    },
+    "6041": {
+      "article": "5708",
+      "price_chf": "24.00",
+      "ip": "17.50",
+      "purchase": "phone",
+      "url": null
+    },
+    "6343": {
+      "article": "5789",
+      "price_chf": "53.25",
+      "ip": "27.50",
+      "purchase": "phone",
+      "url": null
+    },
+    "6124": {
+      "article": "5036",
+      "price_chf": "78.50",
+      "ip": "58.75",
+      "purchase": "phone",
+      "url": null
+    },
+    "358": {
+      "article": "4634",
+      "price_chf": "48.25",
+      "ip": "24.25",
+      "purchase": "phone",
+      "url": null
+    },
+    "3441": {
+      "article": "5707",
+      "price_chf": "48.25",
+      "ip": "31.00",
+      "purchase": "phone",
+      "url": null
+    },
+    "6681": {
+      "article": "5345",
+      "price_chf": "46.00",
+      "ip": "30.25",
+      "purchase": "phone",
+      "url": null
+    },
+    "6191": {
+      "article": "5830",
+      "price_chf": "51.25",
+      "ip": "35.00",
+      "purchase": "phone",
+      "url": null
+    }
+  },
+  "missing": []
+};

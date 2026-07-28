@@ -1,30 +1,5 @@
 const state = { products: [], query: "", language: "both" };
-const LIFEPLUS_SHOP_BASE = "https://www.lifeplus.com/SHX4C7/ch/de/product-details/";
-// Product numbers in the PDFs do not always match the current Swiss catalogue.
-// Only verified, purchasable Swiss product numbers belong in this map.
-const SWISS_SHOP_SKUS = {
-  "1021": "1021", "170": "6695", "2629": "2629", "2630": "2630",
-  "2631": "2631", "2632": "2632", "3415": "5828", "3443": "5825",
-  "3446": "5827", "4033": "5821", "4095": "5871", "4129": "4129",
-  "4130": "4130", "4131": "4131", "4132": "4132", "4133": "4133",
-  "4134": "4134", "4144": "4144", "4173": "4173", "4174": "4174",
-  "4998": "5049", "6108": "5826", "6112": "5823", "6134": "6134",
-  "6140": "5834", "6192": "5829", "6237": "5822", "6618": "5413",
-  "6648": "5869", "6651": "5870", "6654": "6654", "6656": "5874",
-  "6658": "5875", "6673": "5879", "6678": "5884", "6679": "5885",
-  "6687": "5887", "6688": "5888", "6689": "5889", "6692": "5390",
-  "6697": "5894", "6698": "5895", "6699": "5896", "6861": "4000",
-  "7796": "4655", "7797": "4656"
-};
-const EXTERNAL_PRODUCT_LINKS = {
-  "4446": "https://www.lifeplus.com/SHX4C7/gb/en/product-details/4446",
-  "6003": "https://www.lifeplus.com/SHX4C7/de/de/product-details/5044",
-  "6601": "https://www.lifeplus.com/SHX4C7/de/de/product-details/5401",
-  "6603": "https://www.lifeplus.com/SHX4C7/de/de/product-details/5403",
-  "6604": "https://www.lifeplus.com/SHX4C7/de/de/product-details/5404",
-  "6800": "https://www.lifeplus.com/SHX4C7/de/de/product-details/4145",
-  "6801": "https://www.lifeplus.com/SHX4C7/de/de/product-details/4146"
-};
+const commerce = window.LIFEPLUS_COMMERCE || { products: {} };
 const input = document.querySelector("#searchInput");
 const results = document.querySelector("#results");
 const count = document.querySelector("#resultCount");
@@ -42,21 +17,19 @@ function matchesFilter(product) {
   return Boolean(product.spanish || product.german);
 }
 
-function getShopUrl(product) {
-  const swissSku = SWISS_SHOP_SKUS[product.sku];
-  if (swissSku) return `${LIFEPLUS_SHOP_BASE}${encodeURIComponent(swissSku)}`;
-  return EXTERNAL_PRODUCT_LINKS[product.sku] || "";
-}
-
 function getVisible() {
   const words = normalize(state.query).split(" ").filter(Boolean);
+  const seenArticles = new Set();
   return state.products
     .filter(product =>
-      getShopUrl(product) && matchesFilter(product) && words.every(word => product.search.includes(word))
+      commerce.products[product.sku] && matchesFilter(product) && words.every(word => product.search.includes(word))
     )
-    .sort((a, b) => {
-      const purchaseDifference = Number(Boolean(SWISS_SHOP_SKUS[b.sku])) - Number(Boolean(SWISS_SHOP_SKUS[a.sku]));
-      return purchaseDifference || a.title.localeCompare(b.title, "es", { sensitivity: "base" });
+    .sort((a, b) => (a.category || "General").localeCompare(b.category || "General", "es", { sensitivity: "base" }) || a.title.localeCompare(b.title, "es", { sensitivity: "base" }))
+    .filter(product => {
+      const article = commerce.products[product.sku].article;
+      if (seenArticles.has(article)) return false;
+      seenArticles.add(article);
+      return true;
     });
 }
 
@@ -76,14 +49,17 @@ function card(product, index) {
   const deAction = product.german && state.language !== "es"
     ? `<a class="pdf-link de" href="${encodeURI(product.german)}" target="_blank" rel="noopener">Datenblatt · DE</a>`
     : "";
-  const shopUrl = getShopUrl(product);
-  const shopAction = `<a class="shop-link" href="${shopUrl}" target="_blank" rel="noopener" aria-label="${escapeHTML(product.title)} kaufen · Comprar ${escapeHTML(product.title)}">Comprar producto · Produkt kaufen <span aria-hidden="true">↗</span></a>`;
+  const sale = commerce.products[product.sku];
+  const shopAction = sale.purchase === "direct"
+    ? `<a class="shop-link" href="${sale.url}" target="_blank" rel="noopener" aria-label="${escapeHTML(product.title)} kaufen · Comprar ${escapeHTML(product.title)}">Comprar producto · Produkt kaufen <span aria-hidden="true">↗</span></a>`
+    : `<a class="shop-link phone" href="${commerce.phone_href}">Llamar para pedir · Zum Bestellen anrufen</a><p class="phone-note">Comunica el Art. ${escapeHTML(sale.article)} y la Shop-ID ${escapeHTML(commerce.shop_id)} al operador.</p>`;
   return `<article class="product" style="animation-delay:${Math.min(index, 8) * 35}ms">
     ${image}
     <div class="product-info">
-      <div class="product-meta"><b>Lifeplus</b>${product.sku ? `<span>Art. ${escapeHTML(product.sku)}</span>` : ""}</div>
+      <div class="product-meta"><b>Lifeplus</b><span>Art. ${escapeHTML(sale.article)}</span></div>
       <h2>${escapeHTML(product.title)}</h2>
       <p class="product-description">${escapeHTML(product.description)}</p>
+      <div class="product-price"><strong>CHF ${escapeHTML(sale.price_chf)}</strong><span>IP ${escapeHTML(sale.ip)}</span></div>
       <div class="actions">
         ${esAction}
         ${deAction}

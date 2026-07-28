@@ -55,10 +55,13 @@ jobs:
           grep -F '${{ github.sha }}' /tmp/deploy-marker.txt
           curl --fail --silent --show-error --location --compressed \
             https://lifepluspdfch.peterestela.com/ \
-            | grep -F 'app.js?v=20260728-verified-external-products'
+            | grep -F 'app.js?v=20260728-swiss-commerce'
           curl --fail --silent --show-error --location \
             https://lifepluspdfch.peterestela.com/data/catalogo-bilingue.js \
             | grep -F 'window.LIFEPLUS_CATALOG'
           curl --fail --silent --show-error --location \
             https://lifepluspdfch.peterestela.com/data/catalogo-bilingue.json \
             | grep -F '"sku": "4999"'
+          curl --fail --silent --show-error --location \
+            https://lifepluspdfch.peterestela.com/data/comercio-suiza.js \
+            | grep -F '"article": "5044"'

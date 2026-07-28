@@ -60,6 +60,11 @@ h1 span { color: #bce1cb; }
 .shop-link span { font-size: 15px; line-height: 1; transition: transform .2s ease; }
 .shop-link:hover { background: var(--green-dark); border-color: var(--green-dark); transform: translateY(-1px); }
 .shop-link:hover span { transform: translate(2px, -2px); }
+.shop-link.phone { background: #27372f; border-color: #27372f; }
+.product-price { display: flex; gap: 18px; align-items: baseline; margin: -4px 0 15px; }
+.product-price strong { color: #d76900; font-size: 18px; }
+.product-price span { color: var(--muted); font-size: 13px; }
+.phone-note { flex-basis: 100%; margin: -2px 0 0; color: var(--muted); font-size: 11px; line-height: 1.4; }
 .unavailable { color: #929b96; font-size: 12px; align-self: center; }
 .empty { text-align: center; padding: 100px 20px; }
 .empty strong { font: 700 25px Manrope, sans-serif; }
