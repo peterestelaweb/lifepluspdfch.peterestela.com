@@ -23,3 +23,6 @@
 - [x] 3.7 Incorporar la ficha alemana 4173 de Forever Young Clinical Peptide Crème with OPC
 - [x] 3.8 Incorporar la ficha suiza en alemán 2629 de Natural Hand Wash
 - [x] 3.9 Incorporar las fichas alemanas 4158 de Be Refueled chocolate, 5044 de Aloe Vera Caps y 4133 de Forever Young Strengthen & Restore Shampoo
+- [x] 3.10 Incorporar el lote alemán del 02.08.2026, enlazando 19 fichas de producto aunque cambie la referencia entre mercados
+- [x] 3.11 Incorporar fichas e imágenes oficiales extraídas para los packs 5019, 5046, 5395, 5397, 5516 y 5692
+- [x] 3.12 Mostrar esos seis packs en el filtro alemán y mantener fuera los dos packs que todavía no tienen ficha DE

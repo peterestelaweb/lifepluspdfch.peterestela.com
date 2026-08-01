@@ -43,11 +43,15 @@ COMMERCIAL_ONLY = {
         "title": "Everyday Wellbeing Plus DE",
         "description": "Pack Everyday Wellbeing Plus para Suiza · Everyday Wellbeing Plus Paket für die Schweiz",
         "category": "Packs Lifeplus",
+        "image": "assets/products/pack-5019-de.jpg",
+        "german": "fichas_producto/de/5019-PI_DE.pdf",
     },
     "5046": {
         "title": "Everyday Wellbeing Gold Plus DE",
         "description": "Pack Everyday Wellbeing Gold Plus para Suiza · Everyday Wellbeing Gold Plus Paket für die Schweiz",
         "category": "Packs Lifeplus",
+        "image": "assets/products/pack-5046-de.jpg",
+        "german": "fichas_producto/de/5046-PI_DE.pdf",
     },
     "5279": {
         "title": "Sport Pack Canister Berry DE",
@@ -58,21 +62,29 @@ COMMERCIAL_ONLY = {
         "title": "Getting Started - Berry",
         "description": "Pack de inicio, sabor frutos del bosque · Einstiegspaket, Beerengeschmack",
         "category": "Packs Lifeplus",
+        "image": "assets/products/pack-5395-de.jpg",
+        "german": "fichas_producto/de/5395-PI_DE.pdf",
     },
     "5397": {
         "title": "Recovery - Berry",
         "description": "Pack de recuperación, sabor frutos del bosque · Regenerationspaket, Beerengeschmack",
         "category": "Packs Lifeplus",
+        "image": "assets/products/pack-5397-de.jpg",
+        "german": "fichas_producto/de/5397-PI_DE.pdf",
     },
     "5516": {
         "title": "Everyday Wellbeing DE",
         "description": "Pack Everyday Wellbeing para Suiza · Everyday Wellbeing Paket für die Schweiz",
         "category": "Packs Lifeplus",
+        "image": "assets/products/pack-5516-de.jpg",
+        "german": "fichas_producto/de/5516-PI_DE.pdf",
     },
     "5692": {
         "title": "Everyday Wellbeing Gold DE",
         "description": "Pack Everyday Wellbeing Gold para Suiza · Everyday Wellbeing Gold Paket für die Schweiz",
         "category": "Packs Lifeplus",
+        "image": "assets/products/pack-5692-de.jpg",
+        "german": "fichas_producto/de/5692-PI_DE.pdf",
     },
 }
 
@@ -124,9 +136,9 @@ def main() -> None:
         standalone_products.append({
             "sku":key,
             **metadata,
-            "image":"",
+            "image":metadata.get("image", ""),
             "spanish":"",
-            "german":"",
+            "german":metadata.get("german", ""),
             "commercial_only":True,
             "search":" ".join((metadata["title"], metadata["description"], article)).lower(),
         })

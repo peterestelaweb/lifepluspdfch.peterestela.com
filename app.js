@@ -12,7 +12,6 @@ function normalize(value) {
 }
 
 function matchesFilter(product) {
-  if (product.commercial_only) return state.language === "both";
   if (state.language === "es") return Boolean(product.spanish);
   if (state.language === "de") return Boolean(product.german);
   return Boolean(product.spanish || product.german);
@@ -67,7 +66,8 @@ function card(product, index) {
       <h2>${escapeHTML(product.title)}</h2>
       <p class="product-description">${escapeHTML(product.description)}</p>
       ${product.note ? `<p class="document-note">${escapeHTML(product.note)}</p>` : ""}
-      ${product.commercial_only ? `<p class="pack-note">Pack comercial sin ficha PDF propia · Verkaufspaket ohne eigenes PDF</p>` : ""}
+      ${product.commercial_only && !product.german ? `<p class="pack-note">Pack comercial sin ficha PDF propia · Verkaufspaket ohne eigenes PDF</p>` : ""}
+      ${product.commercial_only && product.german ? `<p class="pack-note">Pack comercial con ficha alemana · Verkaufspaket mit deutschem Datenblatt</p>` : ""}
       <div class="product-price"><strong>CHF ${escapeHTML(sale.price_chf)}</strong><span>IP ${escapeHTML(sale.ip)}</span></div>
       <div class="actions">
         ${esAction}

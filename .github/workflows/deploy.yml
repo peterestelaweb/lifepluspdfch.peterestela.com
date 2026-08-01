@@ -55,7 +55,7 @@ jobs:
           grep -F '${{ github.sha }}' /tmp/deploy-marker.txt
           curl --fail --silent --show-error --location --compressed \
             https://lifepluspdfch.peterestela.com/ \
-            | grep -F 'app.js?v=20260801-lycopin'
+            | grep -F 'app.js?v=20260802-pack-pdfs'
           curl --fail --silent --show-error --location --compressed \
             https://lifepluspdfch.peterestela.com/ \
             | grep -F 'catalogo-bilingue.js?v=20260802-de-batch'
@@ -100,3 +100,18 @@ jobs:
           curl --fail --silent --show-error --location \
             https://lifepluspdfch.peterestela.com/data/comercio-suiza.js \
             | grep -F '"article": "5044"'
+          curl --fail --silent --show-error --location \
+            https://lifepluspdfch.peterestela.com/data/comercio-suiza.json \
+            | grep -F 'assets/products/pack-5019-de.jpg'
+          curl --fail --silent --show-error --location \
+            https://lifepluspdfch.peterestela.com/fichas_producto/de/4461-PI_DE.pdf \
+            --output /tmp/4461-PI_DE.pdf
+          test "$(wc -c < /tmp/4461-PI_DE.pdf)" -eq 504865
+          curl --fail --silent --show-error --location \
+            https://lifepluspdfch.peterestela.com/fichas_producto/de/5019-PI_DE.pdf \
+            --output /tmp/5019-PI_DE.pdf
+          test "$(wc -c < /tmp/5019-PI_DE.pdf)" -eq 424758
+          curl --fail --silent --show-error --location \
+            https://lifepluspdfch.peterestela.com/assets/products/pack-5019-de.jpg \
+            --output /tmp/pack-5019-de.jpg
+          test "$(wc -c < /tmp/pack-5019-de.jpg)" -eq 36823

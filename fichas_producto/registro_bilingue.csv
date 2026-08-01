@@ -1,11 +1,11 @@
 ﻿sku,archivo_es,archivo_de,estado_de,url_oficial_de,nota
-3415,3415-PI_ES Phase’oMine.pdf,,no_disponible,https://ww1.lifeplus.com/uk/en
+3415,3415-PI_ES Phase’oMine.pdf,4461-PI_DE.pdf,descargado_alemania,https://ww1.lifeplus.com/media/pdf/piSheets/DE/4461-PI_DE.pdf,"La referencia alemana 4461 corresponde al producto suizo 5828."
 3428,3428-PI_ES SUPPORT TABS PLUS.pdf,,no_disponible,https://ww1.lifeplus.com/uk/en
 3439,3439-PI_ES INMUNE FORMULA.pdf,,no_disponible,https://ww1.lifeplus.com/uk/en
 3441,3441-PI_ES. RYR Plus.pdf,,no_disponible,https://ww1.lifeplus.com/uk/en
-3443,3443-PI_ES KOMPKT PLUS.pdf,,no_disponible,https://ww1.lifeplus.com/uk/en
+3443,3443-PI_ES KOMPKT PLUS.pdf,5508-PI_DE.pdf,descargado_alemania,https://ww1.lifeplus.com/media/pdf/piSheets/DE/5508-PI_DE.pdf,"La referencia alemana 5508 corresponde al producto suizo 5825."
 3457,3457-PI_ES Lycopin Plus.pdf,5509-PI_DE.pdf,descargado_alemania,https://ww1.lifeplus.com/media/pdf/piSheets/DE/5509-PI_DE.pdf,"La ficha alemana corresponde al Art. 5509. No existe una ficha equivalente en Estados Unidos."
-3538,3538-PI_ES PARABALANCE.pdf,,no_disponible,https://ww1.lifeplus.com/uk/en
+3538,3538-PI_ES PARABALANCE.pdf,5388-PI_DE.pdf,descargado_alemania,https://ww1.lifeplus.com/media/pdf/piSheets/DE/5388-PI_DE.pdf
 6355,6355-PI_ES D-MANNOSE PLUS.pdf,6355-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6355-PI_DE.pdf
 6699,6699-PI_ES OmegAhi Peach Mango.pdf,6699-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6699-PI_DE.pdf
 6799,6799-PI_ES Proanthenols® 200 SV.pdf,6799-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6799-PI_DE.pdf
@@ -28,7 +28,7 @@
 6806,Be Recharged Sachet - Berry 30 ct 6806-PI_ES.pdf,6806-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6806-PI_DE.pdf
 6807,Be Recharged Sachet - Citrus 30 ct 6807-PI_ES.pdf,6807-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6807-PI_DE.pdf
 6644,Be Refueled chocolate 6644-PI_ES.pdf,4158-PI_DE.pdf,descargado_alemania,https://ww1.lifeplus.com/de/de/product-details/4158
-6645,Be Refueled vainilla 6645-PI_ES.pdf,6645-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6645-PI_DE.pdf
+6645,Be Refueled vainilla 6645-PI_ES.pdf,4156-PI_DE.pdf,descargado_alemania,https://ww1.lifeplus.com/de/de/product-details/4156
 6605,Be Sustained Berry 6605-PI_ES.pdf,6605-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6605-PI_DE.pdf
 6606,Be Sustained Citrus 6606-PI_ES.pdf,6606-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6606-PI_DE.pdf
 6612,Be Sustained en sobres - Sabor a cítricos 6612-PI_ES.pdf,6612-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6612-PI_DE.pdf
@@ -45,7 +45,7 @@
 9600,CAL MAG PLUS 2.pdf,,no_disponible,https://ww1.lifeplus.com/uk/en
 4040,Cat’s Claw Plus SOLO DISPONIBLE EN USA  4040-PI_ES.pdf,4040-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/4040-PI_DE.pdf
 6663,CBD Oil Revive  SOLO DEISPONIBLE EN  USA .pdf,6663-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6663-PI_DE.pdf
-6133,Circulation Formula 6133-PI_ES.pdf,6133-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6133-PI_DE.pdf
+6133,Circulation Formula 6133-PI_ES.pdf,5010-PI_DE.pdf,descargado_alemania,https://ww1.lifeplus.com/media/pdf/piSheets/DE/5010-PI_DE.pdf
 1012,Co-Q-10 .1012-PI_ES.pdf,1012-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/1012-PI_DE.pdf
 1012,CO-Q-10 PLUS  2.pdf,1012-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/1012-PI_DE.pdf
 6109,Cogelin (Colon Formula) 6109-PI_ES.pdf,6109-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6109-PI_DE.pdf
@@ -68,21 +68,21 @@
 4174,Forever Young Active Renewal Oil with Bakuchiol.pdf,4174-PI_DE.pdf,descargado_alemania,https://ww1.lifeplus.com/de/de/product-details/4174
 4173,Forever Young Clinical Peptide Crème with OPC.pdf,4173-PI_DE.pdf,descargado_alemania,https://ww1.lifeplus.com/de/de/product-details/4173
 4144,Forever Young Day Crème SPF 25.pdf,4144-PI_DE.pdf,descargado_alemania,https://ww1.lifeplus.com/de/de/product-details/4144
-4129,Forever Young Gentle Cream Cleanser.pdf,,no_disponible,https://ww1.lifeplus.com/uk/en
+4129,Forever Young Gentle Cream Cleanser.pdf,4129-PI_DE.pdf,descargado_suiza,https://ww1.lifeplus.com/SHX4C7/ch/de/product-details/4129
 4131,Forever Young Radiance Serum.pdf,,no_disponible,https://ww1.lifeplus.com/uk/en
-4130,Forever Young Rejuvenating Eye Crème.pdf,,no_disponible,https://ww1.lifeplus.com/uk/en
-4134,Forever Young Repair & Protect Conditioner.pdf,,no_disponible,https://ww1.lifeplus.com/uk/en
-4132,Forever Young Rich Moisturizing Crème.pdf,,no_disponible,https://ww1.lifeplus.com/uk/en
+4130,Forever Young Rejuvenating Eye Crème.pdf,4130-PI_DE.pdf,descargado_suiza,https://ww1.lifeplus.com/SHX4C7/ch/de/product-details/4130
+4134,Forever Young Repair & Protect Conditioner.pdf,4134-PI_DE.pdf,descargado_suiza,https://ww1.lifeplus.com/SHX4C7/ch/de/product-details/4134
+4132,Forever Young Rich Moisturizing Crème.pdf,4132-PI_DE.pdf,descargado_suiza,https://ww1.lifeplus.com/SHX4C7/ch/de/product-details/4132
 6112,Forever Young Skin Formula  6112-PI_ES.pdf,6112-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6112-PI_DE.pdf
 4133,Forever Young Strengthen & Restore Shampoo.pdf,4133-PI_DE.pdf,descargado_suiza,https://ww1.lifeplus.com/SHX4C7/ch/de/product-details/4133
-6861,FUSIONS RED  2.pdf,6861-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6861-PI_DE.pdf
-6861,Fusions Red 6861-PI_ES.pdf,6861-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6861-PI_DE.pdf
-6107,Heart Formula 6107-PI_ES.pdf,6107-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6107-PI_DE.pdf
+6861,FUSIONS RED  2.pdf,4000-PI_DE.pdf,descargado_alemania,https://ww1.lifeplus.com/media/pdf/piSheets/DE/4000-PI_DE.pdf
+6861,Fusions Red 6861-PI_ES.pdf,4000-PI_DE.pdf,descargado_alemania,https://ww1.lifeplus.com/media/pdf/piSheets/DE/4000-PI_DE.pdf
+6107,Heart Formula 6107-PI_ES.pdf,5032-PI_DE.pdf,descargado_alemania,https://ww1.lifeplus.com/media/pdf/piSheets/DE/5032-PI_DE.pdf
 4451,HEART FORMULA_ 2.pdf,,no_disponible,https://ww1.lifeplus.com/uk/en
-3447,IRON PLUS.pdf,,no_disponible,https://ww1.lifeplus.com/uk/en
+3447,IRON PLUS.pdf,5047-PI_DE.pdf,descargado_alemania,https://ww1.lifeplus.com/media/pdf/piSheets/DE/5047-PI_DE.pdf
 6113,JOIN FORMULA 6113-PI_ES.pdf,6113-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6113-PI_DE.pdf
 6648,Key-Tonic 6648-PI_ES.pdf,6648-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6648-PI_DE.pdf
-2632,Lifeplus - Natural Hand Cream.pdf,,no_disponible,https://ww1.lifeplus.com/uk/en
+2632,Lifeplus - Natural Hand Cream.pdf,2632-PI_DE.pdf,descargado_suiza,https://ww1.lifeplus.com/SHX4C7/ch/de/product-details/2632
 6063,Lifeplus Discovery 6063-PI_ES.pdf,6063-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6063-PI_DE.pdf
 6691,LIFEPLUS PETS BASICS 6691-PI_ES.pdf,6691-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6691-PI_DE.pdf
 6696,Lifeplus Pets Dental 6696-PI_ES.pdf,6696-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6696-PI_DE.pdf
@@ -95,10 +95,10 @@
 6140,MICRO MINS™ PLUS.pdf,6140-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6140-PI_DE.pdf
 6140,Micro•Mins™ Plus 6140-PI_ES.pdf,6140-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6140-PI_DE.pdf
 6127,MSM Plus pastillas 6127-PI_ES.pdf,6127-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6127-PI_DE.pdf
-1021,MSM Plus Vital Care Lotion 1021-PI_EN.pdf,,no_disponible,https://ww1.lifeplus.com/uk/en
-2631,Natural Body Wash.pdf,,no_disponible,https://ww1.lifeplus.com/uk/en
-6654,Natural Gold Hand & Body Bar.pdf,,no_disponible,https://ww1.lifeplus.com/uk/en
-2630,Natural Hand & Body Lotion.pdf,,no_disponible,https://ww1.lifeplus.com/uk/en
+1021,MSM Plus Vital Care Lotion 1021-PI_EN.pdf,1021-PI_DE.pdf,descargado_suiza,https://ww1.lifeplus.com/SHX4C7/ch/de/product-details/1021
+2631,Natural Body Wash.pdf,2631-PI_DE.pdf,descargado_suiza,https://ww1.lifeplus.com/SHX4C7/ch/de/product-details/2631
+6654,Natural Gold Hand & Body Bar.pdf,6654-PI_DE.pdf,descargado_suiza,https://ww1.lifeplus.com/SHX4C7/ch/de/product-details/6654
+2630,Natural Hand & Body Lotion.pdf,2630-PI_DE.pdf,descargado_suiza,https://ww1.lifeplus.com/SHX4C7/ch/de/product-details/2630
 2629,Natural Hand Wash.pdf,2629-PI_DE.pdf,descargado_suiza,https://ww1.lifeplus.com/SHX4C7/ch/de/product-details/2629
 4999,OMEGOLD.4999-PI_ES.pdf,4999-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/4999-PI_DE.pdf
 6117,ParaCleanse SOLO DISPONIBLE EN USA  6117-PI_ES.pdf,6117-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6117-PI_DE.pdf
@@ -121,7 +121,7 @@
 6653,Solis Raw Cacao y Mushroom 2.pdf,6653-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6653-PI_DE.pdf
 6141,Somazyme 6141-PI_ES.pdf,6141-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6141-PI_DE.pdf
 4449,SUPPORT TABS.pdf,,no_disponible,https://ww1.lifeplus.com/uk/en
-170,Tea Tree Toothpaste PASTA DE DIENTES  170g_6 oz.pdf,,no_disponible,https://ww1.lifeplus.com/uk/en
+170,Tea Tree Toothpaste PASTA DE DIENTES  170g_6 oz.pdf,6695-PI_DE.pdf,descargado_suiza,https://ww1.lifeplus.com/SHX4C7/ch/de/product-details/6695
 6678,Triple Protein Shake- Chocolate 6678-PI_ES.pdf,6678-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6678-PI_DE.pdf
 6680,Triple Protein Shake- Vainilla (sin edulcorante) SOLO EN ALEMANIA 6680-PI_ES.pdf,6680-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6680-PI_DE.pdf
 6679,Triple Protein Shake- Vainilla 6679-PI_ES.pdf,6679-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6679-PI_DE.pdf
@@ -133,7 +133,7 @@
 1032,VITAMIN E COMPLEX 2.pdf,1032-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/1032-PI_DE.pdf
 6041,VITAMINS D K 2.pdf,6041-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6041-PI_DE.pdf
 6343,Vita–Saurus 6343-PI_ES.pdf,6343-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6343-PI_DE.pdf
-6134,Wonder Gel.pdf,,no_disponible,https://ww1.lifeplus.com/uk/en
+6134,Wonder Gel.pdf,6134-PI_DE.pdf,descargado_suiza,https://ww1.lifeplus.com/SHX4C7/ch/de/product-details/6134
 6357,X-CELL CÍTRICOS 6357-PI_ES.pdf,6357-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6357-PI_DE.pdf
 6600,X-Cell™ con polvo de raíz de remolacha 6600-PI_ES.pdf,6600-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6600-PI_DE.pdf
 6124,Xtra Antioxidants 6124-PI_ES.pdf,6124-PI_DE.pdf,descargado,https://ww2.lifeplus.com/media/pdf/piSheets/US/6124-PI_DE.pdf
