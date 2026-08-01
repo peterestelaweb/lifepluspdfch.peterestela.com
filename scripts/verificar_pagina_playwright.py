@@ -29,6 +29,10 @@ PACK_QUERIES = {
     "5395": "Getting Started", "5397": "Recovery Berry",
     "5516": "Everyday Wellbeing DE", "5692": "Everyday Wellbeing Gold DE",
 }
+GERMAN_PDF_CHECKS = {
+    "4174": "fichas_producto/de/4174-PI_DE.pdf",
+    "5509": "fichas_producto/de/5509-PI_DE.pdf",
+}
 
 
 with sync_playwright() as playwright:
@@ -93,6 +97,17 @@ with sync_playwright() as playwright:
         "hasUsNotice": "No existe una ficha equivalente en Estados Unidos" in lycopin_card.locator(".document-note").inner_text(),
     }
 
+    german_pdf_checks = {}
+    for article, expected_pdf in GERMAN_PDF_CHECKS.items():
+        page.locator("#searchInput").fill(article)
+        card = page.locator(".product")
+        german_link = card.locator('.pdf-link:has-text("DE")')
+        german_pdf_checks[article] = {
+            "visibleProducts": card.count(),
+            "hasGermanPdf": german_link.count() == 1,
+            "germanPdfCorrect": german_link.get_attribute("href") == expected_pdf,
+        }
+
     desktop = browser.new_page(viewport={"width": 1280, "height": 900})
     desktop.goto((ROOT / "index.html").as_uri(), wait_until="networkidle")
     desktop.locator("#searchInput").fill("4168")
@@ -127,6 +142,7 @@ with sync_playwright() as playwright:
         "packNameChecks": name_checks,
         "packFilterCheck": pack_filter_check,
         "lycopinCheck": lycopin_check,
+        "germanPdfChecks": german_pdf_checks,
         "mobileViewport": page.viewport_size,
         "desktopCheck": desktop_check,
         "errors": errors,
