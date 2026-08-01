@@ -30,6 +30,7 @@ PACK_QUERIES = {
     "5516": "Everyday Wellbeing DE", "5692": "Everyday Wellbeing Gold DE",
 }
 GERMAN_PDF_CHECKS = {
+    "4144": "fichas_producto/de/4144-PI_DE.pdf",
     "4174": "fichas_producto/de/4174-PI_DE.pdf",
     "5509": "fichas_producto/de/5509-PI_DE.pdf",
 }

@@ -58,7 +58,7 @@ jobs:
             | grep -F 'app.js?v=20260801-lycopin'
           curl --fail --silent --show-error --location --compressed \
             https://lifepluspdfch.peterestela.com/ \
-            | grep -F 'catalogo-bilingue.js?v=20260801-de-4174'
+            | grep -F 'catalogo-bilingue.js?v=20260801-de-4144'
           curl --fail --silent --show-error --location \
             https://lifepluspdfch.peterestela.com/data/catalogo-bilingue.js \
             | grep -F 'window.LIFEPLUS_CATALOG'
@@ -73,6 +73,10 @@ jobs:
             https://lifepluspdfch.peterestela.com/fichas_producto/de/4174-PI_DE.pdf \
             --output /tmp/4174-PI_DE.pdf
           test "$(wc -c < /tmp/4174-PI_DE.pdf)" -eq 516382
+          curl --fail --silent --show-error --location \
+            https://lifepluspdfch.peterestela.com/fichas_producto/de/4144-PI_DE.pdf \
+            --output /tmp/4144-PI_DE.pdf
+          test "$(wc -c < /tmp/4144-PI_DE.pdf)" -eq 453743
           curl --fail --silent --show-error --location \
             https://lifepluspdfch.peterestela.com/data/comercio-suiza.js \
             | grep -F '"article": "5044"'
