@@ -20,3 +20,4 @@
 - [x] 3.4 Incorporar la ficha alemana 5509 de Lycopin Plus y reseñar que no existe ficha equivalente en Estados Unidos
 - [x] 3.5 Incorporar la ficha alemana 4174 de Forever Young Active Renewal Oil with Bakuchiol
 - [x] 3.6 Incorporar la ficha alemana 4144 de Forever Young Day Crème SPF 25
+- [x] 3.7 Incorporar la ficha alemana 4173 de Forever Young Clinical Peptide Crème with OPC

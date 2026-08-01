@@ -31,6 +31,7 @@ PACK_QUERIES = {
 }
 GERMAN_PDF_CHECKS = {
     "4144": "fichas_producto/de/4144-PI_DE.pdf",
+    "4173": "fichas_producto/de/4173-PI_DE.pdf",
     "4174": "fichas_producto/de/4174-PI_DE.pdf",
     "5509": "fichas_producto/de/5509-PI_DE.pdf",
 }
