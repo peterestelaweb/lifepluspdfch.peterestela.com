@@ -21,3 +21,4 @@
 - [x] 3.5 Incorporar la ficha alemana 4174 de Forever Young Active Renewal Oil with Bakuchiol
 - [x] 3.6 Incorporar la ficha alemana 4144 de Forever Young Day Crème SPF 25
 - [x] 3.7 Incorporar la ficha alemana 4173 de Forever Young Clinical Peptide Crème with OPC
+- [x] 3.8 Incorporar la ficha suiza en alemán 2629 de Natural Hand Wash
