@@ -17,3 +17,4 @@
 - [x] 3.1 Probar en Playwright ficha directa, cesta y teléfono en escritorio y móvil
 - [x] 3.2 Desplegar la primera ampliación y verificar el marcador público `3c314f5`
 - [x] 3.3 Desplegar las nuevas fichas e imágenes y verificar HTML, datos y PDFs públicos
+- [x] 3.4 Incorporar la ficha alemana 5509 de Lycopin Plus y reseñar que no existe ficha equivalente en Estados Unidos

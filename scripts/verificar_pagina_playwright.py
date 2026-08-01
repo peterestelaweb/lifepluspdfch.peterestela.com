@@ -82,6 +82,17 @@ with sync_playwright() as playwright:
     page.locator('.filter[data-language="both"]').click()
     pack_filter_check["visibleInCombinedCatalog"] = page.locator(".product").count() == 1
 
+    page.locator("#searchInput").fill("Lycopin Plus")
+    lycopin_card = page.locator(".product")
+    lycopin_check = {
+        "visibleProducts": lycopin_card.count(),
+        "article": lycopin_card.locator(".product-meta span").inner_text(),
+        "hasSpanishPdf": lycopin_card.locator('.pdf-link:has-text("ES")').count() == 1,
+        "hasGermanPdf": lycopin_card.locator('.pdf-link:has-text("DE")').count() == 1,
+        "germanPdf": lycopin_card.locator('.pdf-link:has-text("DE")').get_attribute("href"),
+        "hasUsNotice": "No existe una ficha equivalente en Estados Unidos" in lycopin_card.locator(".document-note").inner_text(),
+    }
+
     desktop = browser.new_page(viewport={"width": 1280, "height": 900})
     desktop.goto((ROOT / "index.html").as_uri(), wait_until="networkidle")
     desktop.locator("#searchInput").fill("4168")
@@ -115,6 +126,7 @@ with sync_playwright() as playwright:
         "articleChecks": article_checks,
         "packNameChecks": name_checks,
         "packFilterCheck": pack_filter_check,
+        "lycopinCheck": lycopin_check,
         "mobileViewport": page.viewport_size,
         "desktopCheck": desktop_check,
         "errors": errors,

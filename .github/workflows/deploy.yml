@@ -55,13 +55,17 @@ jobs:
           grep -F '${{ github.sha }}' /tmp/deploy-marker.txt
           curl --fail --silent --show-error --location --compressed \
             https://lifepluspdfch.peterestela.com/ \
-            | grep -F 'app.js?v=20260728-swiss-packs'
+            | grep -F 'app.js?v=20260801-lycopin'
           curl --fail --silent --show-error --location \
             https://lifepluspdfch.peterestela.com/data/catalogo-bilingue.js \
             | grep -F 'window.LIFEPLUS_CATALOG'
           curl --fail --silent --show-error --location \
             https://lifepluspdfch.peterestela.com/data/catalogo-bilingue.json \
-            | grep -F '"sku": "4999"'
+            | grep -F 'No existe una ficha equivalente en Estados Unidos.'
+          curl --fail --silent --show-error --location \
+            https://lifepluspdfch.peterestela.com/fichas_producto/de/5509-PI_DE.pdf \
+            --output /tmp/5509-PI_DE.pdf
+          test "$(wc -c < /tmp/5509-PI_DE.pdf)" -eq 100077
           curl --fail --silent --show-error --location \
             https://lifepluspdfch.peterestela.com/data/comercio-suiza.js \
             | grep -F '"article": "5044"'

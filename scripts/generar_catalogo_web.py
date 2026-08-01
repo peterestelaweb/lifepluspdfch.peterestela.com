@@ -56,21 +56,23 @@ def main() -> None:
         title = clean_title(meta.get("title") or preferred["archivo_es"])
         image = meta.get("imagePath", "").replace("images/products/", "assets/products/")
         german = next((row["archivo_de"] for row in group if row["archivo_de"]), "")
+        note = next((row.get("nota", "") for row in group if row.get("nota", "")), "")
         search = " ".join(
             [title, sku, meta.get("search_terms", ""), " ".join(meta.get("tags", []))]
         )
-        products.append(
-            {
-                "sku": sku,
-                "title": title,
-                "description": f"Ficha técnica de {title}",
-                "category": meta.get("category", "Productos Lifeplus"),
-                "image": image,
-                "spanish": f"fichas_producto/es/{preferred['archivo_es']}",
-                "german": f"fichas_producto/de/{german}" if german else "",
-                "search": norm(search),
-            }
-        )
+        product = {
+            "sku": sku,
+            "title": title,
+            "description": f"Ficha técnica de {title}",
+            "category": meta.get("category", "Productos Lifeplus"),
+            "image": image,
+            "spanish": f"fichas_producto/es/{preferred['archivo_es']}",
+            "german": f"fichas_producto/de/{german}" if german else "",
+            "search": norm(search),
+        }
+        if note:
+            product["note"] = note
+        products.append(product)
 
     products.sort(key=lambda item: item["title"].casefold())
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)

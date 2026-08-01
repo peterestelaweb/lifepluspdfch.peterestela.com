@@ -69,6 +69,7 @@ h1 span { color: #bce1cb; }
 .product-price span { color: var(--muted); font-size: 13px; }
 .phone-note { flex-basis: 100%; margin: -2px 0 0; color: var(--muted); font-size: 11px; line-height: 1.4; }
 .pack-note { margin: -8px 0 14px; color: var(--green-dark); font-size: 11px; line-height: 1.4; font-weight: 600; }
+.document-note { margin: -8px 0 14px; padding: 9px 10px; border-left: 3px solid #d76900; background: #fff8ec; color: #5d4935; font-size: 11px; line-height: 1.45; }
 .unavailable { color: #929b96; font-size: 12px; align-self: center; }
 .empty { text-align: center; padding: 100px 20px; }
 .empty strong { font: 700 25px Manrope, sans-serif; }
