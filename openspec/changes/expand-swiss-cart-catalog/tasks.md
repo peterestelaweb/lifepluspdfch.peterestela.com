@@ -22,3 +22,4 @@
 - [x] 3.6 Incorporar la ficha alemana 4144 de Forever Young Day Crème SPF 25
 - [x] 3.7 Incorporar la ficha alemana 4173 de Forever Young Clinical Peptide Crème with OPC
 - [x] 3.8 Incorporar la ficha suiza en alemán 2629 de Natural Hand Wash
+- [x] 3.9 Incorporar las fichas alemanas 4158 de Be Refueled chocolate, 5044 de Aloe Vera Caps y 4133 de Forever Young Strengthen & Restore Shampoo

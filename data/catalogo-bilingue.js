@@ -7,7 +7,7 @@ window.LIFEPLUS_CATALOG = {
       "category": "General",
       "image": "assets/products/prodpic_6003_1.jpg",
       "spanish": "fichas_producto/es/Aloe Vera Caps 6003-PI_ES.pdf",
-      "german": "fichas_producto/de/6003-PI_DE.pdf",
+      "german": "fichas_producto/de/5044-PI_DE.pdf",
       "search": "aloe vera caps 6003 aloe vera caps 6003 pi es pdf aloeveracaps6003pies pdf aloe vera caps 6003 pi es pdf aloe vera caps 6003 pi es aloeveracaps6003pies aloe vera caps 6003 aloeveracaps6003 aloe vera caps 6003 pi es pdf documento ficha tecnica aloeveracaps6003piespdfdocumentofichatecnica aloe vera caps 6003 pi es pdf documento ficha tecnica"
     },
     {
@@ -117,7 +117,7 @@ window.LIFEPLUS_CATALOG = {
       "category": "General",
       "image": "assets/products/prodpic_6644_1.jpg",
       "spanish": "fichas_producto/es/Be Refueled chocolate 6644-PI_ES.pdf",
-      "german": "fichas_producto/de/6644-PI_DE.pdf",
+      "german": "fichas_producto/de/4158-PI_DE.pdf",
       "search": "be refueled chocolate 6644 be refueled chocolate 6644 pi es pdf berefueledchocolate6644pies pdf be refueled chocolate 6644 pi es pdf be refueled chocolate 6644 pi es berefueledchocolate6644pies refueled chocolate 6644 refueledchocolate6644 be refueled chocolate 6644 pi es pdf documento ficha tecnica berefueledchocolate6644piespdfdocumentofichatecnica be refueled chocolate 6644 pi es pdf documento ficha tecnica"
     },
     {
@@ -547,7 +547,7 @@ window.LIFEPLUS_CATALOG = {
       "category": "Energía y Rendimiento",
       "image": "assets/products/prodpic_4133_1.jpg",
       "spanish": "fichas_producto/es/Forever Young Strengthen & Restore Shampoo.pdf",
-      "german": "",
+      "german": "fichas_producto/de/4133-PI_DE.pdf",
       "search": "forever young strengthen restore shampoo 4133 forever young strengthen restore shampoo pdf foreveryoungstrengthen restoreshampoo pdf forever young strengthen restore shampoo foreveryoungstrengthen restoreshampoo forever young strengthen restore shampoo strength foreveryoungstrengthenrestoreshampoostrength forever young strengthen restore shampoo strength pdf documento ficha tecnica foreveryoungstrengthen restoreshampoostrengthpdfdocumentofichatecnica forever young strengthen restore shampoo strength pdf documento ficha tecnica"
     },
     {
