@@ -18,6 +18,6 @@
 
 ## 4. Despliegue y producción
 
-- [ ] 4.1 Crear commit y desplegar por el workflow FTP cautivo
-- [ ] 4.2 Confirmar el commit en deploy-marker.txt y los datos corregidos en producción
-- [ ] 4.3 Repetir la auditoría pública y documentar el dictamen final
+- [x] 4.1 Crear commit y desplegar por el workflow FTP cautivo
+- [x] 4.2 Confirmar el commit en deploy-marker.txt y los datos corregidos en producción
+- [x] 4.3 Repetir la auditoría pública y documentar el dictamen final

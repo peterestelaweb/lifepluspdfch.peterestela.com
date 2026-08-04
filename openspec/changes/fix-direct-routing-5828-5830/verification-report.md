@@ -19,4 +19,12 @@ Fecha: 2026-08-04
 
 ## Producción
 
-Pendiente de completar tras el despliegue: commit, ejecución, marcador público y repetición de la auditoría sobre los archivos publicados.
+- Commit funcional desplegado: `d883185464bcfce85f7d29654be6f75295791f88`.
+- Ejecución GitHub Actions: `30906363858`, completada correctamente.
+- El marcador público confirmó el commit y la ejecución anteriores.
+- El SHA-256 del `data/comercio-suiza.json` público coincide con el archivo local auditado: `39e686b98ef0b929d3cdf91fef38c103d6a50ea53db6d750592f28ff74c726d9`.
+- La repetición final del validador produjo: `PASS: 105 referencias visibles coinciden en artículo, CHF, IP y ruta; 5828 y 5830 son direct en SHX4C7.`
+
+## Dictamen
+
+La corrección está verificada y lista para aprobación final. Las 105 tarjetas usan artículos, precios, IP y rutas compatibles con el inventario suizo actual. Los artículos 5828 y 5830 ya no se presentan como compra telefónica/cesta y enlazan directamente a la tienda correcta `SHX4C7`.
