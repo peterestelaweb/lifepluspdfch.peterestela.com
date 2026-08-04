@@ -22,12 +22,14 @@ El generador obtiene `productSet` y `nmp` de Lifeplus Suiza. La lógica normal y
 2. Regenerar ambos formatos (`comercio-suiza.json` y `.js`) desde un único payload para que servidor y apertura local permanezcan idénticos.
 3. Añadir una validación local independiente que compare cada tarjeta generada con `productSet`/`nmp`, además de aserciones específicas para `5828` y `5830`.
 4. Mantener el despliegue FTP existente, reforzando la verificación pública para buscar `"purchase": "direct"` junto a ambos artículos y comprobar `deploy-marker.txt`.
+5. Reintentar de forma limitada las lecturas públicas cuando Bana Hosting devuelva su pantalla anti-bots con HTTP 200. Una respuesta solo será válida si no contiene `One moment, please` y además supera las aserciones de commit y contenido.
 
 ## Risks / Trade-offs
 
 - [Lifeplus cambia el inventario entre generación y prueba] → descargar una sola fuente para cada ejecución y registrar la fecha de auditoría.
 - [Una sesión de navegador sustituye la tienda por otra anterior] → validar enlaces y móvil en una sesión limpia, y comprobar que producción publica literalmente `SHX4C7`.
 - [Workflow verde pero raíz pública antigua] → exigir que el marcador público contenga el commit actual y que el JSON público contenga las rutas corregidas.
+- [Pantalla anti-bots temporal produce un falso fallo] → descargar los documentos críticos con reintentos, identificación estable y parámetro anticaché antes de validar su contenido.
 
 ## Migration Plan
 

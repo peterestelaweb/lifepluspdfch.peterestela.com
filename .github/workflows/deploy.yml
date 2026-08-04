@@ -52,22 +52,39 @@ jobs:
 
       - name: Verify public deploy
         run: |
-          curl --fail --silent --show-error --location \
+          fetch_public() {
+            url="$1"
+            output="$2"
+            for attempt in 1 2 3 4 5 6; do
+              curl --fail --silent --show-error --location --compressed \
+                --user-agent 'Mozilla/5.0 LifeplusDeployVerifier/1.0' \
+                "${url}?deploy=${{ github.sha }}-${attempt}" \
+                --output "${output}" || true
+              if test -s "${output}" && ! grep -Fq 'One moment, please' "${output}"; then
+                return 0
+              fi
+              sleep 5
+            done
+            echo "Public verification remained behind the hosting challenge: ${url}" >&2
+            return 1
+          }
+
+          fetch_public \
             https://lifepluspdfch.peterestela.com/deploy-marker.txt \
-            | tee /tmp/deploy-marker.txt
+            /tmp/deploy-marker.txt
+          cat /tmp/deploy-marker.txt
           grep -F '${{ github.sha }}' /tmp/deploy-marker.txt
-          curl --fail --silent --show-error --location --compressed \
-            https://lifepluspdfch.peterestela.com/ \
-            | grep -F 'app.js?v=20260802-pack-pdfs'
-          curl --fail --silent --show-error --location --compressed \
-            https://lifepluspdfch.peterestela.com/ \
-            | grep -F 'catalogo-bilingue.js?v=20260802-de-batch'
-          curl --fail --silent --show-error --location \
+          fetch_public https://lifepluspdfch.peterestela.com/ /tmp/index.html
+          grep -F 'app.js?v=20260802-pack-pdfs' /tmp/index.html
+          grep -F 'catalogo-bilingue.js?v=20260802-de-batch' /tmp/index.html
+          fetch_public \
             https://lifepluspdfch.peterestela.com/data/catalogo-bilingue.js \
-            | grep -F 'window.LIFEPLUS_CATALOG'
-          curl --fail --silent --show-error --location \
+            /tmp/catalogo-bilingue.js
+          grep -F 'window.LIFEPLUS_CATALOG' /tmp/catalogo-bilingue.js
+          fetch_public \
             https://lifepluspdfch.peterestela.com/data/catalogo-bilingue.json \
-            | grep -F 'No existe una ficha equivalente en Estados Unidos.'
+            /tmp/catalogo-bilingue.json
+          grep -F 'No existe una ficha equivalente en Estados Unidos.' /tmp/catalogo-bilingue.json
           curl --fail --silent --show-error --location \
             https://lifepluspdfch.peterestela.com/fichas_producto/de/5509-PI_DE.pdf \
             --output /tmp/5509-PI_DE.pdf
@@ -100,12 +117,13 @@ jobs:
             https://lifepluspdfch.peterestela.com/fichas_producto/de/5044-PI_DE.pdf \
             --output /tmp/5044-PI_DE.pdf
           test "$(wc -c < /tmp/5044-PI_DE.pdf)" -eq 103821
-          curl --fail --silent --show-error --location \
+          fetch_public \
             https://lifepluspdfch.peterestela.com/data/comercio-suiza.js \
-            | grep -F '"article": "5044"'
-          curl --fail --silent --show-error --location \
+            /tmp/comercio-suiza.js
+          grep -F '"article": "5044"' /tmp/comercio-suiza.js
+          fetch_public \
             https://lifepluspdfch.peterestela.com/data/comercio-suiza.json \
-            --output /tmp/comercio-suiza.json
+            /tmp/comercio-suiza.json
           python3 - <<'PY'
           import json
           data = json.load(open('/tmp/comercio-suiza.json'))
@@ -115,9 +133,7 @@ jobs:
               assert record['purchase'] == 'direct', (article, record)
               assert record['url'] == f'https://www.lifeplus.com/SHX4C7/ch/de/product-details/{article}'
           PY
-          curl --fail --silent --show-error --location \
-            https://lifepluspdfch.peterestela.com/data/comercio-suiza.json \
-            | grep -F 'assets/products/pack-5019-de.jpg'
+          grep -F 'assets/products/pack-5019-de.jpg' /tmp/comercio-suiza.json
           curl --fail --silent --show-error --location \
             https://lifepluspdfch.peterestela.com/fichas_producto/de/4461-PI_DE.pdf \
             --output /tmp/4461-PI_DE.pdf

@@ -21,3 +21,4 @@
 - [x] 4.1 Crear commit y desplegar por el workflow FTP cautivo
 - [x] 4.2 Confirmar el commit en deploy-marker.txt y los datos corregidos en producción
 - [x] 4.3 Repetir la auditoría pública y documentar el dictamen final
+- [x] 4.4 Evitar falsos negativos de despliegue cuando el hosting muestra temporalmente su pantalla anti-bots
