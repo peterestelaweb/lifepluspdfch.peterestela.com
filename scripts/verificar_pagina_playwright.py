@@ -2,14 +2,16 @@
 """Comprueba visualmente el catálogo local con Chromium y Playwright."""
 
 import json
+import os
 from pathlib import Path
 
 from playwright.sync_api import sync_playwright
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SCREENSHOT = ROOT / "verificacion-playwright.png"
-PRODUCT_SCREENSHOT = ROOT / "verificacion-producto-comprable.png"
+SCREENSHOT_DIR = Path(os.environ.get("LIFEPLUS_SCREENSHOT_DIR", ROOT))
+SCREENSHOT = SCREENSHOT_DIR / "verificacion-playwright.png"
+PRODUCT_SCREENSHOT = SCREENSHOT_DIR / "verificacion-producto-comprable.png"
 EXPECTED_ARTICLES = {
     "4145": ("107.75", "74.50"), "4146": ("107.75", "74.50"),
     "4147": ("114.00", "67.75"), "4148": ("114.00", "67.75"),
@@ -66,6 +68,10 @@ PACK_GERMAN_PDF_CHECKS = {
     "5516": ("fichas_producto/de/5516-PI_DE.pdf", "assets/products/pack-5516-de.jpg"),
     "5692": ("fichas_producto/de/5692-PI_DE.pdf", "assets/products/pack-5692-de.jpg"),
 }
+DIRECT_QUERIES = {
+    "5828": "Phase'oMine",
+    "5830": "Proanthenol 50mg",
+}
 
 
 with sync_playwright() as playwright:
@@ -112,6 +118,16 @@ with sync_playwright() as playwright:
         page.locator("#searchInput").fill(query)
         card = page.locator(f'.product:has-text("Art. {article}")')
         name_checks[article] = card.count() == 1
+
+    direct_route_checks = {}
+    for article, query in DIRECT_QUERIES.items():
+        page.locator("#searchInput").fill(query)
+        card = page.locator(".product")
+        direct_route_checks[article] = {
+            "visibleProducts": card.count(),
+            "buttonText": card.locator(".shop-link").inner_text(),
+            "href": card.locator(".shop-link").get_attribute("href"),
+        }
 
     page.locator('.filter[data-language="es"]').click()
     page.locator("#searchInput").fill("4168")
@@ -184,6 +200,7 @@ with sync_playwright() as playwright:
         "productCheck": product_check,
         "articleChecks": article_checks,
         "packNameChecks": name_checks,
+        "directRouteChecks": direct_route_checks,
         "packFilterCheck": pack_filter_check,
         "lycopinCheck": lycopin_check,
         "germanPdfChecks": german_pdf_checks,

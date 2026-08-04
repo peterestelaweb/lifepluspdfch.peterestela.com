@@ -20,6 +20,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Audit Swiss purchase routing
+        run: python3 scripts/verificar_rutas_suiza.py
+
       - name: Write deploy marker
         run: |
           printf 'commit=%s\nrun=%s\nbuilt_at=%s\n' \
@@ -100,6 +103,18 @@ jobs:
           curl --fail --silent --show-error --location \
             https://lifepluspdfch.peterestela.com/data/comercio-suiza.js \
             | grep -F '"article": "5044"'
+          curl --fail --silent --show-error --location \
+            https://lifepluspdfch.peterestela.com/data/comercio-suiza.json \
+            --output /tmp/comercio-suiza.json
+          python3 - <<'PY'
+          import json
+          data = json.load(open('/tmp/comercio-suiza.json'))
+          by_article = {record['article']: record for record in data['products'].values()}
+          for article in ('5828', '5830'):
+              record = by_article[article]
+              assert record['purchase'] == 'direct', (article, record)
+              assert record['url'] == f'https://www.lifeplus.com/SHX4C7/ch/de/product-details/{article}'
+          PY
           curl --fail --silent --show-error --location \
             https://lifepluspdfch.peterestela.com/data/comercio-suiza.json \
             | grep -F 'assets/products/pack-5019-de.jpg'

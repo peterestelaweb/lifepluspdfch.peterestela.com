@@ -88,7 +88,6 @@ COMMERCIAL_ONLY = {
     },
 }
 
-PHONE_OVERRIDES = {"5828", "5830"}
 CART_URL = "https://www.lifeplus.com/SHX4C7/ch/de/view-cart"
 
 
@@ -110,8 +109,8 @@ def main() -> None:
         if not row:
             missing.append({"pdf_sku":pdf_sku,"article":article})
             continue
-        is_direct = article in direct and article not in PHONE_OVERRIDES
-        is_cart = article in phone and article not in PHONE_OVERRIDES
+        is_direct = article in direct
+        is_cart = article in phone
         products[pdf_sku] = {
             "article":article,
             "price_chf":f"{float(row.get('price') or row.get('Price')):.2f}",
