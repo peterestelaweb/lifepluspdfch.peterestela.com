@@ -25,6 +25,7 @@ Fecha: 2026-08-04
 - El SHA-256 del `data/comercio-suiza.json` público coincide con el archivo local auditado: `39e686b98ef0b929d3cdf91fef38c103d6a50ea53db6d750592f28ff74c726d9`.
 - La repetición final del validador produjo: `PASS: 105 referencias visibles coinciden en artículo, CHF, IP y ruta; 5828 y 5830 son direct en SHX4C7.`
 - Una segunda ejecución publicó correctamente el cierre OpenSpec, pero Bana Hosting mostró temporalmente su pantalla anti-bots al verificador de GitHub. Se reforzó el workflow para reintentar los documentos críticos y rechazar explícitamente esa pantalla antes de evaluar el contenido.
+- El workflow reforzado se validó con el commit `37b152d76588885fd9746f7a05960fa1e43ba1f3` y la ejecución `30906762678`, completada correctamente. El marcador público y la huella SHA-256 se volvieron a comprobar de forma independiente.
 
 ## Dictamen
 
